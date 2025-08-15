@@ -6,12 +6,13 @@ vim /etc/profile
 vim ~/.zshrc
 # 如果使用 [登录ssh自动进入tmux.sh] 则在 export TERM=xterm 之前加
 # LoginInfo
-CNAME=`uname -n`
+CNAME="Yashi JP1"
 echo "======== $CNAME ========"
-df -hl
 ps -fa
+df -ahl / /mnt/d
+w
 # sensors
 figlet -c $CNAME
-figlet -c $USER
 date
+who
 # (普通用户用 ps -f 不显示root的)
