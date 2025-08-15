@@ -216,6 +216,7 @@
 │   │   ├── ./Batch_Windows/快捷方式/蓝牙文件传送.lnk
 │   │   └── ./Batch_Windows/快捷方式/高级系统设置.lnk
 │   ├── ./Batch_Windows/恢复Windows显示器设定.txt
+│   ├── ./Batch_Windows/恢复默认权限.bat
 │   ├── ./Batch_Windows/手动安装CAB和MSU格式更新包.md
 │   ├── ./Batch_Windows/打包IPX协议.bat
 │   ├── ./Batch_Windows/扩展VHD.bat
@@ -1614,6 +1615,7 @@
 │   ├── ./ShellScript_Linux_Command/who_显示当前登录的所有用户.sh
 │   └── ./ShellScript_Linux_Command/whoami_查看当前用户名.sh
 ├── ./ShellScript_SSH
+│   ├── ./ShellScript_SSH/SSH两步验证.sh
 │   ├── ./ShellScript_SSH/SSH传输文件.sh
 │   ├── ./ShellScript_SSH/SSH启用X11转发.sh
 │   ├── ./ShellScript_SSH/SSH复制文件.sh
@@ -1624,6 +1626,7 @@
 │   ├── ./ShellScript_SSH/ssh报错NoMatchingKeyExchangeMethodFound.sh
 │   ├── ./ShellScript_SSH/使用不同的SSH密钥.md
 │   ├── ./ShellScript_SSH/创建只能用于端口转发的账户.md
+│   ├── ./ShellScript_SSH/将命令结果输出到本地剪贴板.sh
 │   ├── ./ShellScript_SSH/连接超时关闭时间.md
 │   ├── ./ShellScript_SSH/配置ssh的超时时间.sh
 │   └── ./ShellScript_SSH/验证证书是否匹配.sh
@@ -1985,4 +1988,4 @@
 │           └── ./vue/Tiptap/tiptapPlus/findColors.ts
 └── ./web.config
 
-141 directories, 1845 files
+141 directories, 1848 files
