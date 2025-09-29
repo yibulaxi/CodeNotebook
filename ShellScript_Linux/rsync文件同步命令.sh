@@ -1,3 +1,25 @@
+# 进行备份
+rsync -a --info=progress2 /mnt/src/ /mnt/data/
+# -a ：归档模式，递归并保留时间、权限、软硬链接等元信息。
+# -HAX ：额外保留硬链接 (-H)、ACL (-A)、扩展属性 (-X)。
+# --info=progress2 ：显示进度，方便监控大规模复制过程。
+# 注意 /mnt/vc/ 最后有个 /，表示复制目录内容而不是目录本身。
+
+# 后续备份
+rsync -a --delete --itemize-changes --info=stats2,flist0,progress2 /mnt/src/ /mnt/data/
+# -a：归档，保留时间戳/权限/时间等元数据。
+# -HAX：保留硬链接、ACL、xattr。
+# --delete：让目标端删除在源端已删除的文件，实现“镜像”。
+# --itemize-changes：列出具体变更（新增/修改/删除）。
+# --info=progress2：显示总体进度；stats2 给出统计。
+# 末尾的斜杠很关键：/mnt/vc/ 表示复制“目录内容”；别写成 /mnt/vc（那会在目标下再套一层目录）。
+# 可选增强（根据规模和介质决定是否加）：
+# 断点续传：--partial
+# 更可靠的改动判定（代价是更慢）：--checksum
+# 大量小文件优化：并发预读可借助 --preallocate（对某些 FS 有益）
+
+
+
 # rsync命令是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件。rsync使用所谓的“rsync算法”来使本地和远程两个主机之间的文件达到同步，这个算法只传送两个文件的不同部分，而不是每次都整份传送，因此速度相当快。 rsync是一个功能非常强大的工具，其命令也有很多功能特色选项，我们下面就对它的选项一一进行分析说明。
 # rsync [OPTION]... SRC DEST
 # rsync [OPTION]... SRC [USER@]host:DEST

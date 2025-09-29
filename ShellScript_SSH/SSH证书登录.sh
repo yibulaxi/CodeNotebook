@@ -10,7 +10,7 @@ ssh 192.168.2.250 -p 22 -l yashi -i /Users/yashi/sshkey/us1_yashi.key
 # 创建
 chattr -i ~/.ssh/authorized_keys
 
-ssh-keygen -m PEM -t rsa -b 8192 -C ssh.rsa
+ssh-keygen -m PEM -t rsa -b 4096 -C ssh.rsa
 cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
 
 ssh-keygen -m PEM -t ed25519 -C ssh.ed25519

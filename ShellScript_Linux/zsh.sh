@@ -18,9 +18,17 @@ chsh -s /usr/local/bin/zsh
 
 # msys2 如下
 pacman -S zsh
-# 在msys2的安装目录(c:\msys64)下打开msys2_shell.cmd文件。修改文件中LOGINSHELL变量如下
-set "LOGINSHELL=zsh"
-# 第三方终端命令行修改为
+# MSYS2 每个子环境（比如 clang64.exe, mingw64.exe, ucrt64.exe）都会读取自己的配置文件。
+# 对于 clang64，对应的是：
+# C:\msys64\clang64.ini
+# 打开这个文件，把 SHELL 改成：
+# SHELL=zsh.exe
+# 如果不想改 .ini 文件，可以直接在启动时指定：
+# C:\msys64\clang64.exe -defterm -no-start -here /usr/bin/zsh.exe
+#     -defterm 默认用 Windows Console Host 或 Windows Terminal（取决于系统设置）作为终端
+#     -no-start 告诉 MSYS2 启动器 不要调用 start 来新开一个进程，而是直接在当前窗口里运行
+#     -here 在当前目录启动 shell，而不是切换到用户主目录或者 MSYS2 的默认路径
+# 第三方终端：命令行修改为：
 # C:\tools\msys64\usr\bin\zsh.exe --login
 
 # 可以通过echo $SHELL查看当前默认的shell，如果没有改为/bin/zsh，那么需要重启shell。
@@ -57,7 +65,7 @@ cd fonts
 # 更新 oh-my-zsh
 omz update
 
-# (anon):12: character not in range 或者特殊符号乱码
+# (anon):12: character not in range
 apt install locales -y
 # .zshrc添加
 export LC_ALL=C.UTF-8

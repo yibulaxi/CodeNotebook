@@ -3,6 +3,7 @@ DOCKERSAVEF="${DOCKERIMAGE//[\/:\\]/_}"
 echo "$DOCKERIMAGE" "$DOCKERSAVEF"
 
 # 离线pull 从另一台电脑下载image
+docker pull $DOCKERIMAGE
 docker save $DOCKERIMAGE | nice -n 19 xz -z -e -9 -T 0 -v -c >$DOCKERSAVEF.tar.xz
 # 清理
 docker rmi $DOCKERIMAGE

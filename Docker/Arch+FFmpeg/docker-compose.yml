@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  arch:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: arch
+    hostname: darch
+    environment:
+      - TZ=Asia/Shanghai
+      - LANG=zh_CN.UTF-8
+      - LC_ALL=zh_CN.UTF-8
+      - LANGUAGE=zh_CN:zh
+    stdin_open: true
+    tty: true
+    volumes:
+      - /root:/root
+      - /home:/home
+      - /:/mnt
+    # 如果你希望容器完全跟宿主 /etc/localtime 保持一致，可解除下一行注释：
+    # - /etc/localtime:/etc/localtime:ro
+    user: "0:0"
+    restart: unless-stopped

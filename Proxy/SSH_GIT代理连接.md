@@ -9,6 +9,7 @@ notepad C:\Users\yashi\.ssh\config
 
 ```conf
 Host github.com
+  HostName ssh.github.com
   ProxyCommand "C:\Program Files\Git\mingw64\bin\connect.exe" -S 127.0.0.1:1080 %h %p
 
 Host gitlab.com

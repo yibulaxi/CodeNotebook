@@ -32,6 +32,24 @@ rsync -anv source/ destination
 rsync -av --delete source/ destination
 # 上面命令中，--delete参数会使得destination成为source的一个镜像。
 
+# 断点续传
+
+rsync -avP --append-verify source_file user@remote:/path/to/destination/
+# -a ：归档模式，保持符号链接、权限、时间戳等属性。
+# -v ：显示详细输出。
+# -P ：等同于 --partial --progress，在中断时保留已传输部分，并显示进度。
+# --append-verify ：断点续传时，在已传部分后追加，同时校验内容完整性（推荐比单纯 --append 更安全）。
+# 大文件传输中断：若传输被中断，再次执行命令，会自动从上次中断的位置续传。
+rsync -avP --append-verify bigfile.iso user@remote:/data/
+# 目录递归同步
+rsync -avP --append-verify /local/dir/ user@remote:/remote/dir/
+# 网络不稳定场景：建议加上 --timeout=SECONDS，避免长时间等待。
+rsync -avP --append-verify --timeout=60 /data/ user@remote:/backup/
+# 校验
+# --append 虽然速度更快，但不会校验已传部分，如果之前传输部分损坏，会导致文件不一致。
+# --append-verify 会做校验，更可靠，但稍微耗时。
+# 如果担心文件完整性，传输完成后可以再跑一次 rsync -avc（带 --checksum），强制校验源和目标文件是否一致。
+
 # 【排除文件】
 
 # --exclude 参数

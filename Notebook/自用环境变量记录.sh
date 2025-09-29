@@ -11,7 +11,7 @@ SET GRADLE_USER_HOME="D:\Android\gradle"
 SET GOROOT="C:\SDK\Go"
 SET GOPATH="P:\go"
 SET FLUTTER_ROOT="C:\SDK\flutter"
-SET PATH="%PATH%;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;%JAVA_HOME%\jre\bin;%JAVA_HOME%\bin;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;%ANDROID_HOME%\build-tools\34.0.0;%GRADLE_HOME%\bin;%FLUTTER_ROOT%\bin;C:\tools\msys64\usr\bin;"
+SET PATH="%PATH%;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;%JAVA_HOME%\jre\bin;%JAVA_HOME%\bin;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;%ANDROID_HOME%\build-tools\34.0.0;%GRADLE_HOME%\bin;%FLUTTER_ROOT%\bin;C:\tools\msys64\clang64\bin;C:\tools\msys64\usr\bin;"
 
 # Linux
 export NO_PROXY=localhost,127.0.0.1,::1

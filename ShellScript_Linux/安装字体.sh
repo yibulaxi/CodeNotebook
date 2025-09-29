@@ -1,6 +1,9 @@
 cp *.otf /usr/share/fonts/add/
 chmod u+rwx /usr/share/fonts/add/*
 cd /usr/share/fonts/add
+
+sudo pacman -Syu xorg-mkfontscale xorg-mkfontdir fontconfig
+
 mkfontscale
 mkfontdir
 fc-cache -fv

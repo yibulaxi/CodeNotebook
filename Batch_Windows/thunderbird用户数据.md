@@ -31,7 +31,9 @@ Profiles\xxxxxxxx.default-release\
    D:\yashi\Thunderbird\
    ```
 
-## 步骤三：使用 `profiles.ini` 重定向配置路径（推荐）
+## 步骤三：使用 `profiles.ini` 重定向配置路径
+
+**快速：** 使用 GUI 命令 `thunderbird.exe -p` 打开配置管理器。
 
 在新的机器或新系统中，执行以下操作：
 
