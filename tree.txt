@@ -3,7 +3,9 @@
 │   ├── ./AI/Ollama导入导出模型.bat
 │   ├── ./AI/Ollama环境变量.ini
 │   ├── ./AI/Windows安装CUDA驱动.md
-│   └── ./AI/ollama.docker-compose.yml
+│   ├── ./AI/ollama.docker-compose.yml
+│   ├── ./AI/yolo.bat
+│   └── ./AI/yolo_cam.py
 ├── ./Algorithm
 │   ├── ./Algorithm/冒泡排序.c
 │   ├── ./Algorithm/得到数字中的每一位数字.c
@@ -69,6 +71,7 @@
 │   ├── ./Assembly/基本程序结构.asm
 │   └── ./Assembly/循环loop.asm
 ├── ./Batch
+│   ├── ./Batch/7z基准测试.bat
 │   ├── ./Batch/7z解压缩所有压缩包.bat
 │   ├── ./Batch/Clink
 │   │   ├── ./Batch/Clink/在vscode中使用clink.json
@@ -89,6 +92,7 @@
 │   ├── ./Batch/对当前文件夹及其子文件夹中的特定扩展名文件进行操作.bat
 │   ├── ./Batch/将命令结果赋值给变量.bat
 │   ├── ./Batch/循环.bat
+│   ├── ./Batch/批量渲染SVG到PNG.bat
 │   ├── ./Batch/文件是否存在.bat
 │   ├── ./Batch/时间日期.bat
 │   ├── ./Batch/映射cat.bat
@@ -120,7 +124,9 @@
 │   ├── ./Batch_Windows/Bitlocker
 │   │   ├── ./Batch_Windows/Bitlocker/Bitlocker使用U盘解锁.txt
 │   │   ├── ./Batch_Windows/Bitlocker/Bitlocker每次启动都要输入恢复密钥才能进的解决.bat
-│   │   └── ./Batch_Windows/Bitlocker/Bitlocker配置开机输入PIN.bat
+│   │   ├── ./Batch_Windows/Bitlocker/Bitlocker解锁.bat
+│   │   ├── ./Batch_Windows/Bitlocker/Bitlocker配置开机输入PIN.bat
+│   │   └── ./Batch_Windows/Bitlocker/开启Bitlocker加密.bat
 │   ├── ./Batch_Windows/Compact压缩.bat
 │   ├── ./Batch_Windows/EFS文件加密证书备份和恢复.bat
 │   ├── ./Batch_Windows/MSYS2
@@ -248,7 +254,6 @@
 │   ├── ./Batch_Windows/虚拟内存.bat
 │   ├── ./Batch_Windows/解压IntelRST快速存储驱动.bat
 │   ├── ./Batch_Windows/解压缩WinXP安装包中的文件.bat
-│   ├── ./Batch_Windows/还原文件权限.bat
 │   ├── ./Batch_Windows/还原系统.bat
 │   ├── ./Batch_Windows/重置winsock.bat
 │   ├── ./Batch_Windows/重置文件夹权限为只有自己能用.bat
@@ -601,6 +606,74 @@
 ├── ./Dart_Flutter_Widget
 │   ├── ./Dart_Flutter_Widget/ListView.dart
 │   └── ./Dart_Flutter_Widget/widgets.txt
+├── ./Docker
+│   ├── ./Docker/Arch+FFmpeg
+│   │   ├── ./Docker/Arch+FFmpeg/Dockerfile
+│   │   └── ./Docker/Arch+FFmpeg/docker-compose.yml
+│   ├── ./Docker/CentOS.sh
+│   ├── ./Docker/DockerPHP.sh
+│   ├── ./Docker/DockerPHP安装扩展.sh
+│   ├── ./Docker/Docker_run_命令.sh
+│   ├── ./Docker/Dockerfile
+│   ├── ./Docker/Docker宝塔.sh
+│   ├── ./Docker/Firewalld影响Docker容器间通信.sh
+│   ├── ./Docker/MySQL.sh
+│   ├── ./Docker/NTP校时服务器.sh
+│   ├── ./Docker/Portainer可视化界面.sh
+│   ├── ./Docker/Portainer更新.sh
+│   ├── ./Docker/PostgreSQL.sh
+│   ├── ./Docker/RHEL7-8装CE.sh
+│   ├── ./Docker/Redis.sh
+│   ├── ./Docker/Tomcat.sh
+│   ├── ./Docker/WSL2发行版迁移数据文件.bat
+│   ├── ./Docker/docker-compose
+│   │   ├── ./Docker/docker-compose/MongoDB.docker-compose.yml
+│   │   ├── ./Docker/docker-compose/docker-compose-bme.yml
+│   │   ├── ./Docker/docker-compose/docker-compose-nginx-php.yml
+│   │   ├── ./Docker/docker-compose/docker-compose-postgre-sql.yml
+│   │   ├── ./Docker/docker-compose/docker-compose-uptime.yml
+│   │   └── ./Docker/docker-compose/docker-compose.sh
+│   ├── ./Docker/docker-firewalld允许容器间通信.sh
+│   ├── ./Docker/dockerPull代理.sh
+│   ├── ./Docker/jar包打包Docker.sh
+│   ├── ./Docker/mac基础实例.sh
+│   ├── ./Docker/mosquitto.sh
+│   ├── ./Docker/run.txt
+│   ├── ./Docker/runoob-test-php.conf
+│   ├── ./Docker/修改存储位置.sh
+│   ├── ./Docker/修改窗口管理器.sh
+│   ├── ./Docker/容器.sh
+│   ├── ./Docker/导入导出.sh
+│   ├── ./Docker/执行远程服务器Docker容器中的命令.sh
+│   ├── ./Docker/批处理.sh
+│   ├── ./Docker/拷贝主机和容器之间的文件.sh
+│   ├── ./Docker/持续监控log输出.sh
+│   ├── ./Docker/无损修改端口映射.sh
+│   ├── ./Docker/查看状态.sh
+│   ├── ./Docker/检查容器健康状态.md
+│   ├── ./Docker/添加IPv6.md
+│   ├── ./Docker/清理.sh
+│   ├── ./Docker/用FTP管理文件.sh
+│   ├── ./Docker/登入控制台.sh
+│   ├── ./Docker/离线pull.sh
+│   ├── ./Docker/移动数据到其它盘.sh
+│   ├── ./Docker/端口映射.sh
+│   ├── ./Docker/自用DockerNginxPHP配置
+│   │   ├── ./Docker/自用DockerNginxPHP配置/DockerNginxPHP.sh
+│   │   └── ./Docker/自用DockerNginxPHP配置/nginx_conf
+│   │       ├── ./Docker/自用DockerNginxPHP配置/nginx_conf/conf.d
+│   │       │   └── ./Docker/自用DockerNginxPHP配置/nginx_conf/conf.d/default.conf
+│   │       ├── ./Docker/自用DockerNginxPHP配置/nginx_conf/deny.conf
+│   │       ├── ./Docker/自用DockerNginxPHP配置/nginx_conf/fastcgi.conf
+│   │       ├── ./Docker/自用DockerNginxPHP配置/nginx_conf/mime.types
+│   │       ├── ./Docker/自用DockerNginxPHP配置/nginx_conf/nginx.conf
+│   │       ├── ./Docker/自用DockerNginxPHP配置/nginx_conf/pathinfo.conf
+│   │       ├── ./Docker/自用DockerNginxPHP配置/nginx_conf/phpconf.conf
+│   │       ├── ./Docker/自用DockerNginxPHP配置/nginx_conf/port.conf
+│   │       ├── ./Docker/自用DockerNginxPHP配置/nginx_conf/share.conf
+│   │       └── ./Docker/自用DockerNginxPHP配置/nginx_conf/ssl.conf
+│   ├── ./Docker/虚拟盘.sh
+│   └── ./Docker/镜像.sh
 ├── ./Game
 │   └── ./Game/Minecraft
 │       ├── ./Game/Minecraft/Chunky.txt
@@ -952,7 +1025,8 @@
 │   ├── ./Other/摩尔斯电码.md
 │   ├── ./Other/日语假名输入.md
 │   ├── ./Other/正则表达式.md
-│   └── ./Other/生僻字.md
+│   ├── ./Other/生僻字.md
+│   └── ./Other/绒问卷.md
 ├── ./PHP
 │   ├── ./PHP/HTTP错误代码.php
 │   ├── ./PHP/HelloWorld.php
@@ -1041,12 +1115,14 @@
 │   │   └── ./Powershell/Hyper-V/导出Hyper-V虚拟机.ps1
 │   ├── ./Powershell/PFX证书清除密码.ps1
 │   ├── ./Powershell/oh-my-posh.ps1
+│   ├── ./Powershell/ps1双击运行.bat
 │   ├── ./Powershell/倒计时继续.ps1
 │   ├── ./Powershell/创建空白文件.ps1
 │   ├── ./Powershell/到指定时间关机.ps1
 │   ├── ./Powershell/操作剪贴板.ps1
 │   ├── ./Powershell/查询谁在占用COM串口.ps1
 │   ├── ./Powershell/比较运算符.ps1
+│   ├── ./Powershell/清理所有空文件夹.ps1
 │   └── ./Powershell/读写文本.ps1
 ├── ./Proxy
 │   ├── ./Proxy/Chocolatey设置代理.bat
@@ -1184,69 +1260,6 @@
 │   │   ├── ./Server/Cloudflare/rclone.sh
 │   │   ├── ./Server/Cloudflare/允许加载R2域名资源Content-Security-Policy.html
 │   │   └── ./Server/Cloudflare/将Mastodon的路径转到R2网址.txt
-│   ├── ./Server/Docker
-│   │   ├── ./Server/Docker/CentOS.sh
-│   │   ├── ./Server/Docker/DockerPHP.sh
-│   │   ├── ./Server/Docker/DockerPHP安装扩展.sh
-│   │   ├── ./Server/Docker/Docker_run_命令.sh
-│   │   ├── ./Server/Docker/Dockerfile
-│   │   ├── ./Server/Docker/Docker宝塔.sh
-│   │   ├── ./Server/Docker/Firewalld影响Docker容器间通信.sh
-│   │   ├── ./Server/Docker/MySQL.sh
-│   │   ├── ./Server/Docker/NTP校时服务器.sh
-│   │   ├── ./Server/Docker/Portainer可视化界面.sh
-│   │   ├── ./Server/Docker/Portainer更新.sh
-│   │   ├── ./Server/Docker/PostgreSQL.sh
-│   │   ├── ./Server/Docker/RHEL7-8装CE.sh
-│   │   ├── ./Server/Docker/Redis.sh
-│   │   ├── ./Server/Docker/Tomcat.sh
-│   │   ├── ./Server/Docker/WSL2发行版迁移数据文件.bat
-│   │   ├── ./Server/Docker/docker-compose
-│   │   │   ├── ./Server/Docker/docker-compose/MongoDB.docker-compose.yml
-│   │   │   ├── ./Server/Docker/docker-compose/docker-compose-bme.yml
-│   │   │   ├── ./Server/Docker/docker-compose/docker-compose-nginx-php.yml
-│   │   │   ├── ./Server/Docker/docker-compose/docker-compose-postgre-sql.yml
-│   │   │   ├── ./Server/Docker/docker-compose/docker-compose-uptime.yml
-│   │   │   └── ./Server/Docker/docker-compose/docker-compose.sh
-│   │   ├── ./Server/Docker/docker-firewalld允许容器间通信.sh
-│   │   ├── ./Server/Docker/jar包打包Docker.sh
-│   │   ├── ./Server/Docker/mac基础实例.sh
-│   │   ├── ./Server/Docker/mosquitto.sh
-│   │   ├── ./Server/Docker/run.txt
-│   │   ├── ./Server/Docker/runoob-test-php.conf
-│   │   ├── ./Server/Docker/修改存储位置.sh
-│   │   ├── ./Server/Docker/修改窗口管理器.sh
-│   │   ├── ./Server/Docker/容器.sh
-│   │   ├── ./Server/Docker/导入导出.sh
-│   │   ├── ./Server/Docker/执行远程服务器Docker容器中的命令.sh
-│   │   ├── ./Server/Docker/批处理.sh
-│   │   ├── ./Server/Docker/拷贝主机和容器之间的文件.sh
-│   │   ├── ./Server/Docker/无损修改端口映射.sh
-│   │   ├── ./Server/Docker/查看状态.sh
-│   │   ├── ./Server/Docker/检查容器健康状态.md
-│   │   ├── ./Server/Docker/添加IPv6.md
-│   │   ├── ./Server/Docker/清理.sh
-│   │   ├── ./Server/Docker/用FTP管理文件.sh
-│   │   ├── ./Server/Docker/登入控制台.sh
-│   │   ├── ./Server/Docker/离线pull.sh
-│   │   ├── ./Server/Docker/移动数据到其它盘.sh
-│   │   ├── ./Server/Docker/端口映射.sh
-│   │   ├── ./Server/Docker/自用DockerNginxPHP配置
-│   │   │   ├── ./Server/Docker/自用DockerNginxPHP配置/DockerNginxPHP.sh
-│   │   │   └── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf
-│   │   │       ├── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/conf.d
-│   │   │       │   └── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/conf.d/default.conf
-│   │   │       ├── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/deny.conf
-│   │   │       ├── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/fastcgi.conf
-│   │   │       ├── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/mime.types
-│   │   │       ├── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/nginx.conf
-│   │   │       ├── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/pathinfo.conf
-│   │   │       ├── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/phpconf.conf
-│   │   │       ├── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/port.conf
-│   │   │       ├── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/share.conf
-│   │   │       └── ./Server/Docker/自用DockerNginxPHP配置/nginx_conf/ssl.conf
-│   │   ├── ./Server/Docker/虚拟盘.sh
-│   │   └── ./Server/Docker/镜像.sh
 │   ├── ./Server/Mastodon
 │   │   ├── ./Server/Mastodon/Mastodon-docker安装.sh
 │   │   ├── ./Server/Mastodon/Mastodon-docker更新.sh
@@ -1380,7 +1393,9 @@
 │   ├── ./ShellScript_Linux/LNMP脚本加入直播插件.sh
 │   ├── ./ShellScript_Linux/Linux操作系统.txt
 │   ├── ./ShellScript_Linux/NTP校时服务器.sh
+│   ├── ./ShellScript_Linux/NetworkManager配置IP地址.sh
 │   ├── ./ShellScript_Linux/RedHat8安装EPEL和RPMf.sh
+│   ├── ./ShellScript_Linux/TPM解锁LUKS.sh
 │   ├── ./ShellScript_Linux/Unable to locate package ifconfig.sh
 │   ├── ./ShellScript_Linux/V2Ray客户端.txt
 │   ├── ./ShellScript_Linux/VNC-Centos-xfce.sh
@@ -1433,6 +1448,7 @@
 │   ├── ./ShellScript_Linux/主机多终端切换快捷键.txt
 │   ├── ./ShellScript_Linux/二进制软件安装快捷方式.sh
 │   ├── ./ShellScript_Linux/从整台电脑中搜索一个字符串.sh
+│   ├── ./ShellScript_Linux/修复UEFI引导.sh
 │   ├── ./ShellScript_Linux/修改命令行模式字体大小.sh
 │   ├── ./ShellScript_Linux/修改时区.sh
 │   ├── ./ShellScript_Linux/内存盘.sh
@@ -1448,15 +1464,16 @@
 │   ├── ./ShellScript_Linux/升级CentOS.sh
 │   ├── ./ShellScript_Linux/升级Ubuntu.sh
 │   ├── ./ShellScript_Linux/压缩解压缩.sh
-│   ├── ./ShellScript_Linux/压缩解压缩：7z压缩参数.md
 │   ├── ./ShellScript_Linux/只能开浏览器的账户.sh
 │   ├── ./ShellScript_Linux/右上角网络图标.sh
 │   ├── ./ShellScript_Linux/同步时间.sh
 │   ├── ./ShellScript_Linux/命令行屏保.sh
 │   ├── ./ShellScript_Linux/复制文件时显示进度.md
 │   ├── ./ShellScript_Linux/安装中文输入法.sh
+│   ├── ./ShellScript_Linux/安装中文输入法中州韵RIME.sh
 │   ├── ./ShellScript_Linux/安装字体.sh
 │   ├── ./ShellScript_Linux/宝塔.sh
+│   ├── ./ShellScript_Linux/常用GUI软件.sh
 │   ├── ./ShellScript_Linux/常用目录和配置文件.md
 │   ├── ./ShellScript_Linux/常用路径.md
 │   ├── ./ShellScript_Linux/开启和断开网络连接.sh
@@ -1470,8 +1487,14 @@
 │   ├── ./ShellScript_Linux/开机进命令行还是图形.sh
 │   ├── ./ShellScript_Linux/志愿计算：FAHClient.sh
 │   ├── ./ShellScript_Linux/恢复刚删除的文件.sh
-│   ├── ./ShellScript_Linux/挂载U盘.sh
-│   ├── ./ShellScript_Linux/挂载Windows文件共享smb.sh
+│   ├── ./ShellScript_Linux/挂载
+│   │   ├── ./ShellScript_Linux/挂载/在安装介质挂载chroot环境.sh
+│   │   ├── ./ShellScript_Linux/挂载/批量解锁LUKS.sh
+│   │   ├── ./ShellScript_Linux/挂载/挂载U盘.sh
+│   │   ├── ./ShellScript_Linux/挂载/挂载Windows文件共享smb.sh
+│   │   ├── ./ShellScript_Linux/挂载/挂载veracrypt.sh
+│   │   ├── ./ShellScript_Linux/挂载/挂载vhdx+BitLocker.sh
+│   │   └── ./ShellScript_Linux/挂载/格式化并挂载软驱.sh
 │   ├── ./ShellScript_Linux/按月份归档每日文件夹.sh
 │   ├── ./ShellScript_Linux/挖矿病毒.sh
 │   ├── ./ShellScript_Linux/文件和网络上限修改.sh
@@ -1484,6 +1507,8 @@
 │   ├── ./ShellScript_Linux/本地DVD源CentOS8.repo
 │   ├── ./ShellScript_Linux/杀死指定进程名称.sh
 │   ├── ./ShellScript_Linux/查找最大文件夹.sh
+│   ├── ./ShellScript_Linux/检查硬盘SMART.sh
+│   ├── ./ShellScript_Linux/检查谁在占用U盘.sh
 │   ├── ./ShellScript_Linux/正则表达式.md
 │   ├── ./ShellScript_Linux/正常关闭指定关键字名称进程.sh
 │   ├── ./ShellScript_Linux/测试两个设备之间的网速.sh
@@ -1500,6 +1525,7 @@
 │   ├── ./ShellScript_Linux/磁盘测速.sh
 │   ├── ./ShellScript_Linux/禁止关屏休眠.sh
 │   ├── ./ShellScript_Linux/禁止黑屏.sh
+│   ├── ./ShellScript_Linux/禁止黑屏和待机.sh
 │   ├── ./ShellScript_Linux/端口.sh
 │   ├── ./ShellScript_Linux/系统服务创建systemctl.md
 │   ├── ./ShellScript_Linux/系统版本.sh
@@ -1575,6 +1601,7 @@
 │   ├── ./ShellScript_Linux_Command/man_显示指定命令的使用手册.sh
 │   ├── ./ShellScript_Linux_Command/mkdir_建立子目录.sh
 │   ├── ./ShellScript_Linux_Command/more_连接或显示文件到标准输出每次输出1页.sh
+│   ├── ./ShellScript_Linux_Command/mount_挂载文件系统.sh
 │   ├── ./ShellScript_Linux_Command/nc_网络通信.sh
 │   ├── ./ShellScript_Linux_Command/nice_以指定优先级运行命令.sh
 │   ├── ./ShellScript_Linux_Command/nslookup_查询DNS记录.sh
@@ -1643,7 +1670,6 @@
 │   ├── ./ShellScript_macOS/允许任何来源.sh
 │   ├── ./ShellScript_macOS/关闭SIP.sh
 │   ├── ./ShellScript_macOS/关闭超线程技术.sh
-│   ├── ./ShellScript_macOS/制作iso文件.sh
 │   ├── ./ShellScript_macOS/启动显示详细过程.sh
 │   ├── ./ShellScript_macOS/屏幕截图路径设置.sh
 │   ├── ./ShellScript_macOS/常用目录移到外置盘.sh
@@ -1771,6 +1797,10 @@
 ├── ./Tools_AI
 │   └── ./Tools_AI/ollama羊驼本地大模型运行框架.md
 ├── ./Tools_FFmpeg
+│   ├── ./Tools_FFmpeg/A7M4-VVC
+│   │   ├── ./Tools_FFmpeg/A7M4-VVC/A7M4-VVC.bat
+│   │   ├── ./Tools_FFmpeg/A7M4-VVC/A7M4-VVC.sh
+│   │   └── ./Tools_FFmpeg/A7M4-VVC/测试VVC支持.bat
 │   ├── ./Tools_FFmpeg/IntelQuickSync.sh
 │   ├── ./Tools_FFmpeg/MacOS下安装ffmpeg和ffplay.sh
 │   ├── ./Tools_FFmpeg/RH8安装ffmpeg.sh
@@ -1868,7 +1898,6 @@
 │   ├── ./TypeScript/计算区间.ts
 │   ├── ./TypeScript/迭代函数、生成器generator.ts
 │   └── ./TypeScript/颜色亮度.ts
-├── ./desktop.ini
 ├── ./iOS
 │   ├── ./iOS/Xcode编译脚本变量.sh
 │   └── ./iOS/修改iTunes更新和备份目录.bat
@@ -1988,4 +2017,4 @@
 │           └── ./vue/Tiptap/tiptapPlus/findColors.ts
 └── ./web.config
 
-141 directories, 1848 files
+144 directories, 1874 files
